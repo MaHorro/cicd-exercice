@@ -2,17 +2,15 @@ name: CI - Test simple
 
 on:
   push:
-    branches: [ "**" ]
+    branches: ["**"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      
-name: Checkout du code
-      uses: actions/checkout@v4
+      - name: Checkout du code
+        uses: actions/checkout@v4
 
-      
-name: Test basique
-      run: echo "CI fonctionne !"
+      - name: Test basique
+        run: echo "CI fonctionne !"
